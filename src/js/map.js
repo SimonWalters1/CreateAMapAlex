@@ -7,7 +7,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 var startmarkers = [
-    ['London', 51.5097076, -0.1327514, 1, './London/index.html', 'UK'],
+    ['Las igunas', 54.972150, -1.611960, 1, './venues/lasigunas.html', 'UK'],
+    ['Man vs Food', 54.977890, -1.445310, 1, './venues/manvsfood.html', 'UK'],
 ];
 
 mapLink =
@@ -25,13 +26,6 @@ for (let i = 0; i < startmarkers.length; i++) {
         .addTo(map);
     arrayOfMarkers.push([startmarkers[i][1], startmarkers[i][2]])
 }
-console.log(arrayOfMarkers)
 
-/* var arrayOfMarkers = [
-    [48.8581817, 2.3454923],
-    [51.5097076, -0.1327514],
-    [52.3723963, 4.8954506],
-    [50.8455315, 4.3554069],
-] */
 var bounds = new L.LatLngBounds(arrayOfMarkers);
 map.fitBounds(bounds);
